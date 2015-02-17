@@ -2,7 +2,9 @@
 ## the result in cache, so we don't have to recompute
 ## a matrix's inverse when we need it.
 
-## Creates a cached matrix object
+## Creates a cached matrix object. This object will
+## store the original matrix and, after being solved 
+## with cacheSolve(), will store the cached inversed matrix
 makeCacheMatrix <- function(x = matrix()) {
     inverseMatrix <- NULL
     set <- function(y) {
